@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/demo8.js"></script>
+    <title>Demo 8</title>
+</head>
+<body ng-app="myApp" ng-controller="MsgCtrl">
+    <h1>{{message}}</h1>
+    <div>{{err}}</div>
+    <div>
+        {{userName}}
+        <form name="searchUser">
+            <input type="text" required placeholder="user name" ng-model="userName" ng-click="search(userName)"/>
+            <input type="submit" value="Search"/>
+        </form>
+    </div>
+    <div>
+        <div>Name : {{user.name}}</div>
+        <div>Location : {{user.location}}</div>
+        <div><img title="{{user.name}}" ng-src="{{user.avatar_url}}" alt="_"></div>
+    </div>
+</body>
+</html>

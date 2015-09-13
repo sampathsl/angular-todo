@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/demo13.js"></script>
+    <title>Demo 13</title>
+</head>
+<body ng-app="myApp" ng-controller="MsgCtrl">
+    <h1>{{message}}</h1>
+    <div>{{err}}</div>
+    <div>
+        {{userName}}
+        <!-- changed ng-click to ng-submit-->
+        <form name="searchUser" ng-submit="search(userName)">
+            <input type="text" required placeholder="user name" ng-model="userName"/>
+            <input type="submit" value="Search"/>
+        </form>
+    </div>
+    <div>
+        <div>Name : {{user.name}}</div>
+        <div>Location : {{user.location}}</div>
+        <div><img title="{{user.name}}" ng-src="{{user.avatar_url}}" alt="_"></div>
+    </div>
+    <table border="1">
+        <thead>
+            <th>Name</th>
+            <th>Starts</th>
+            <th>Language</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="repoo in repos_ | orderBy : reposSortOrder">
+                <td>{{repoo.name}}</td>
+                <td>{{repoo.stargazers_count | number}}</td>
+                <td>{{repoo.language}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

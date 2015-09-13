@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/demo4.js"></script>
+    <title>Demo 4</title>
+</head>
+<body ng-app="myApp" ng-controller="MsgCtrl">
+    <h1>{{message}}</h1>
+    <div>
+        <div>First Name : {{person.firstName}}</div>
+        <div>First Name : {{person.lastName}}</div>
+        <div><img title="{{person.firstName +' '+ person.lastName}}" ng-src="{{person.imageSrc}}" alt="_"></div>
+    </div>
+</body>
+</html>
